@@ -1,0 +1,138 @@
+{
+  "eval_set_id": "eval_set_1",
+  "name": "eval_set_1",
+  "eval_cases": [
+    {
+      "eval_id": "iadetr102",
+      "conversation": [
+        {
+          "invocation_id": "e-b36085fe-4858-4eaa-8055-d3f442322d23",
+          "user_content": {
+            "parts": [
+              {
+                "text": "Merhaba, ben CUST001 numaralı müşteriyim. Siparişlerimi kontrol edebilir misiniz? ORD-102 numaralı sipariş için iadeye ihtiyacım var. Sipariş hasarlı geldi."
+              }
+            ],
+            "role": "user"
+          },
+          "final_response": {
+            "parts": [
+              {
+                "text": "Harika! ORD-102 siparişiniz için iade başarıyla işlendi ve siparişiniz \"iade edildi\" olarak güncellendi. 🛍️\n\nİşte CUST001 müşteri kimliğinize ait sipariş geçmişiniz:\n\n*   **ORD-101:**\n    *   Tarih: 15.10.2023\n    *   Ürünler: Kablosuz Kulaklık\n    *   Durum: Teslim edildi\n    *   Toplam: 120 TL\n\n*   **ORD-102:**\n    *   Tarih: 01.11.2023\n    *   Ürünler: USB-C Kablosu, Telefon Kılıfı\n    *   Durum: İade edildi\n    *   Toplam: 35 TL\n\nBaşka bir konuda yardımcı olabilir miyim? 😊"
+              }
+            ],
+            "role": "model"
+          },
+          "intermediate_data": {
+            "invocation_events": [
+              {
+                "author": "customer_service_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "text": "Elbette, CUST001! Siparişlerinizi kontrol edebilirim ve hasarlı gelen ORD-102 siparişiniz için iade süreci başlatabilirim. Hemen hallediyorum!\n\n",
+                      "thought_signature": "Cp4EAY89a1_WZL4X6ABOVW-mL3hyQ73T8KQQAdR-ECS0NdRbOvln-fTr767hEtdTuNjSwIe-kVWAx0xCTzlE3bSb4WYwTzjJooGfn9ruh-7OrM72rdWggZ-A1NaGMQa6lFyvNWrq37TOx0kLA7cJkaTPc4uBHyOKZhnuF15julKKfLi12R6V7tkWMLJzOt0FjBJ961eJw_Q3zx3GikCmEvMol7-EVMI4nitD21_KlUKTmN-55lnRakcEY1KAR7N88Gol3MUg5y2NY9t_XUSn6J4IHf6M4cAq8FRC4p2CRB-R0PXxuzGjAH2z8YGu5uK3gnBFpgrhZAmY-rs5Av4pgKFSVVoc3QqHt87yQcshUa9QFRk0niamWej236DzT7WV0vgMzJNpgdUpEKgFPfbfxTazZnv6kvO2ezNdrcHZ36Vkg6Udj8aoyQ6zEXPz-f-V7aTgvteaYIIwctsI2qEmC-Ae2wuZdBmLjf7vEBIAO_XQmVZgpd3qW-8ayQNtoXkB8CGs-sALn7Jk_W6DqbufQVVoJGJJFEHGL8l7KueFS8WNMgh1NEwOQZ3t7dMS7yW7Zi6kRb5mzQNJy8ZnKTewRugHdiX4xUwxHNS78EGq_nuH0p2hZUyYC01Jf3y8V7f9i60MYZ0L9GFQBrTxQkljgvU4rezWFNgr3hlhSzGTihEf4K8nda-wpTfQ-usoE2VWoKPhFc53gvOvdGJy-vjJnPA="
+                    },
+                    {
+                      "function_call": {
+                        "id": "adk-f7cdc19e-c1d2-45b7-9ad3-fa2213ce10f1",
+                        "args": {
+                          "reason": "damaged",
+                          "order_id": "ORD-102"
+                        },
+                        "name": "issue_refund"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "customer_service_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-f7cdc19e-c1d2-45b7-9ad3-fa2213ce10f1",
+                        "name": "issue_refund",
+                        "response": {
+                          "status": "success",
+                          "order_id": "ORD-102",
+                          "new_status": "refunded",
+                          "refund_amount": "Full refund of $35.0 processed",
+                          "message": "Refund issued for order ORD-102 due to: damaged"
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              },
+              {
+                "author": "customer_service_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_call": {
+                        "id": "adk-8b26501f-b1d8-4964-9923-ba453975477c",
+                        "args": {
+                          "customer_id": "CUST001"
+                        },
+                        "name": "get_purchase_history"
+                      }
+                    }
+                  ],
+                  "role": "model"
+                }
+              },
+              {
+                "author": "customer_service_agent",
+                "content": {
+                  "parts": [
+                    {
+                      "function_response": {
+                        "id": "adk-8b26501f-b1d8-4964-9923-ba453975477c",
+                        "name": "get_purchase_history",
+                        "response": {
+                          "orders": [
+                            {
+                              "order_id": "ORD-101",
+                              "date": "2023-10-15",
+                              "items": [
+                                "Wireless Headphones"
+                              ],
+                              "total": 120.0,
+                              "status": "delivered"
+                            },
+                            {
+                              "order_id": "ORD-102",
+                              "date": "2023-11-01",
+                              "items": [
+                                "USB-C Cable",
+                                "Phone Case"
+                              ],
+                              "total": 35.0,
+                              "status": "refunded"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  ],
+                  "role": "user"
+                }
+              }
+            ]
+          },
+          "creation_timestamp": 1779372253.8498836
+        }
+      ],
+      "session_input": {
+        "app_name": "customer_service_agent",
+        "user_id": "user"
+      },
+      "creation_timestamp": 1779372683.4454687
+    }
+  ],
+  "creation_timestamp": 1779372315.7760642
+}

@@ -1,0 +1,2229 @@
+{
+  "eval_set_result_id": "customer_service_agent_customer_service_eval_1779371003.7754302",
+  "eval_set_result_name": "customer_service_agent_customer_service_eval_1779371003.7754302",
+  "eval_set_id": "customer_service_eval",
+  "eval_case_results": [
+    {
+      "eval_set_file": "customer_service_eval",
+      "eval_set_id": "customer_service_eval",
+      "eval_id": "refund_request",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.6,
+          "criterion": {
+            "threshold": 0.6,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.4054054054054054,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-9a5b3203-0452-4246-8f9b-f75d2beaf2cb",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I want a refund for order ORD-102 because it was damaged.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Absolutely! I've processed a full refund for your order ORD-102 because it was damaged. You should see the refund of $35.0 reflected in your account shortly. If you have any other questions, feel free to ask! 🌟",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "customer_service_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-0a5c44c8-a64d-4d52-ae36-be10edbd244b",
+                          "args": {
+                            "order_id": "ORD-102",
+                            "reason": "damaged"
+                          },
+                          "name": "issue_refund",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CrACAY89a1_v7CXpwSUGzbNEL3jr-c6qfr7XzIbjTmv7lDw9PPyJviSvhpT7VK4HSVQOT4B1Xi6IV4sjdkuVPMkarE263GA37pWZ66qHyeM4pJVZk4UBS2TU6UAslQE807cZoeTgMHZx-STk5PEVdFVuOLGoHUmG01GDddm385rOqIENL_fi2EW0lkYFthWW6agp7Z19tuxHqAILQsl9f55YWmCoJiQTSDgFLoWAwsWZ9KQm2lqZzhbXxR0A1Ys_xGLPTyeUoeSlZahhxvs8d2kA9vjNeBRI3647y7aQZks_Vq63JFjbvjZlfBryJLKJM2YJU7JokpWVgxqwEAsW9nKD_urcToLb1HANq8qWZckUhgfC6NwWcD6j_hJsYkKNoGFPCd92l6_PzyqJ-0zkPtjJTQ==",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "customer_service_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-0a5c44c8-a64d-4d52-ae36-be10edbd244b",
+                          "name": "issue_refund",
+                          "response": {
+                            "status": "success",
+                            "order_id": "ORD-102",
+                            "new_status": "refunded",
+                            "refund_amount": "Full refund of $35.0 processed",
+                            "message": "Refund issued for order ORD-102 due to: damaged"
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1779370999.752776,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "customer_service_agent": {
+                  "name": "customer_service_agent",
+                  "instructions": "\nYou are a helpful and efficient retail customer service representative. 🛍️\nYour goal is to assist customers with their purchase history, refunds, and product inquiries.\n\n**Guidelines:**\n1.  **Identify the Customer:** If a customer asks about their history or order status, ask for their Customer ID if they haven't provided it.\n2.  **Check Order Status:** Use `get_purchase_history` to see the current status of orders (e.g., ordered, shipped, delivered, refunded).\n3.  **Handle Refunds:** When a customer wants a refund, ask for the Order ID and the reason for the refund. Use the `issue_refund` tool. If the customer mentions damage, use \"damaged\" as the reason.\n4.  **Product Inquiries:** For product questions, use `lookup_product_info`. If a product is out of stock, inform the customer.\n5.  **Be Polite & Professional:** Always use a friendly tone and emojis where appropriate.\n6.  **Prioritize Solutions:** Try to resolve the customer's issue quickly using the available tools.\n\n**Available Tools:**\n* `get_purchase_history`: Get past orders and their current status for a customer.\n* `issue_refund`: Process a refund for an order and update its status.\n* `lookup_product_info`: Get details about a product.\n\n\nYou are an agent. Your internal name is \"customer_service_agent\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Retrieves the purchase history for a given customer, including order status.\n\nArgs:\n    customer_id: The unique identifier for the customer.\n\nReturns:\n    A dictionary containing a list of past orders with their current status.",
+                          "name": "get_purchase_history",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "customer_id": {
+                                "title": "Customer Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "customer_id"
+                            ],
+                            "title": "get_purchase_historyParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Issues a refund for a specific order and updates its status.\n\nArgs:\n    order_id: The unique identifier for the order.\n    reason: The reason for the refund.\n\nReturns:\n    A dictionary confirming the refund status and updated order information.",
+                          "name": "issue_refund",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "order_id": {
+                                "title": "Order Id",
+                                "type": "string"
+                              },
+                              "reason": {
+                                "title": "Reason",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "order_id",
+                              "reason"
+                            ],
+                            "title": "issue_refundParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Looks up details for a specific product.\n\nArgs:\n    product_name: The name of the product to look up.\n\nReturns:\n    A dictionary with product details.",
+                          "name": "lookup_product_info",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "product_name": {
+                                "title": "Product Name",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "product_name"
+                            ],
+                            "title": "lookup_product_infoParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "turn_1_refund",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I want a refund for order ORD-102 because it was damaged.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Your refunf for order **ORD-102** due to \"damaged\"  has been successfully processed! Refund amount: **$35.0**. Your order status has been updated to **refunded**.\nIs there anything else I can help you with today?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "order_id": "ORD-102",
+                    "reason": "damaged"
+                  },
+                  "name": "issue_refund",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.6,
+              "criterion": {
+                "threshold": 0.6,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.4054054054054054,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___61419267-9f6a-47ab-ac05-a9a4f39fe332",
+      "session_details": {
+        "id": "___eval___session___61419267-9f6a-47ab-ac05-a9a4f39fe332",
+        "app_name": "customer_service_agent",
+        "user_id": "eval_user_3",
+        "state": {
+          "__llm_request_key__": "b5506091-5792-40a2-8363-ba5073cf31b0"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "I want a refund for order ORD-102 because it was damaged.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-9a5b3203-0452-4246-8f9b-f75d2beaf2cb",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "3a9f64ae-8250-4f2c-9db7-c9da3dc4af78",
+            "timestamp": 1779370993.991174
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-0a5c44c8-a64d-4d52-ae36-be10edbd244b",
+                    "args": {
+                      "order_id": "ORD-102",
+                      "reason": "damaged"
+                    },
+                    "name": "issue_refund",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CrACAY89a1_v7CXpwSUGzbNEL3jr-c6qfr7XzIbjTmv7lDw9PPyJviSvhpT7VK4HSVQOT4B1Xi6IV4sjdkuVPMkarE263GA37pWZ66qHyeM4pJVZk4UBS2TU6UAslQE807cZoeTgMHZx-STk5PEVdFVuOLGoHUmG01GDddm385rOqIENL_fi2EW0lkYFthWW6agp7Z19tuxHqAILQsl9f55YWmCoJiQTSDgFLoWAwsWZ9KQm2lqZzhbXxR0A1Ys_xGLPTyeUoeSlZahhxvs8d2kA9vjNeBRI3647y7aQZks_Vq63JFjbvjZlfBryJLKJM2YJU7JokpWVgxqwEAsW9nKD_urcToLb1HANq8qWZckUhgfC6NwWcD6j_hJsYkKNoGFPCd92l6_PzyqJ-0zkPtjJTQ==",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "5d3ffed0-af65-4973-911f-194138e7e06e"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 13,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 13
+                }
+              ],
+              "prompt_token_count": 476,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 476
+                }
+              ],
+              "thoughts_token_count": 70,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 559,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.4920026339017428,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-9a5b3203-0452-4246-8f9b-f75d2beaf2cb",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "5d3ffed0-af65-4973-911f-194138e7e06e"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "isolation_scope": null,
+            "id": "ed49d476-d52c-4323-a9dd-c2f0f46fb6d1",
+            "timestamp": 1779370994.1097405
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-0a5c44c8-a64d-4d52-ae36-be10edbd244b",
+                    "name": "issue_refund",
+                    "response": {
+                      "status": "success",
+                      "order_id": "ORD-102",
+                      "new_status": "refunded",
+                      "refund_amount": "Full refund of $35.0 processed",
+                      "message": "Refund issued for order ORD-102 due to: damaged"
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-9a5b3203-0452-4246-8f9b-f75d2beaf2cb",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "9dc4f06a-3812-4615-b27d-63187cce4813",
+            "timestamp": 1779370999.7533486
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Absolutely! I've processed a full refund for your order ORD-102 because it was damaged. You should see the refund of $35.0 reflected in your account shortly. If you have any other questions, feel free to ask! 🌟",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "b5506091-5792-40a2-8363-ba5073cf31b0"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 53,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 53
+                }
+              ],
+              "prompt_token_count": 603,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 603
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 656,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.19430358454866228,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-9a5b3203-0452-4246-8f9b-f75d2beaf2cb",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "b5506091-5792-40a2-8363-ba5073cf31b0"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "4eb787cd-d516-46ba-896a-76b6d819ed8d",
+            "timestamp": 1779370999.7588398
+          }
+        ],
+        "last_update_time": 1779370999.7588398
+      },
+      "user_id": "eval_user_3"
+    },
+    {
+      "eval_set_file": "customer_service_eval",
+      "eval_set_id": "customer_service_eval",
+      "eval_id": "product_info_check",
+      "final_eval_status": 1,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.6,
+          "criterion": {
+            "threshold": 0.6,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.6666666666666666,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-f5597b18-b2bb-4185-bc4c-72e213fabcb0",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Do you have wireless headphones in stock?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Great news! 🎉 We do have wireless headphones in stock. They are noise-canceling with a 20-hour battery life and are priced at $120. Let me know if you'd like to add them to your cart! 🎧",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "customer_service_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-a9fa76bd-9462-4c8c-9baf-1fab91101d45",
+                          "args": {
+                            "product_name": "wireless headphones"
+                          },
+                          "name": "lookup_product_info",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CvACAY89a1_mrvaIa0b3ympWuwNNS_KXaFNBEOqxIKslvnsLqtBnHGM3tkhmc0DT6W5ojkOPeKdw5yYK7OVUFF3Kgf61dUTqDSbm32J0spbvlPhXy5-gd6xWThehxnSigAkvQZqBiJzXAhcj4d7qcSkfnTm5nufS8P0dZTCmG9ozWLuk7x06fQDA6BgObmo2Jp1nP7Sah2HF5e5rMeU3bkfCa-vbRt5Q8sMqwJNInpEeQrPF4_ytWHNvP6wV1MzqjL-xx1WEZHzUaVNZqQfb6zY0mjbn02kZLMjUwvKp9DVm0CtZry0Vx5aE2idbmER3064WC2ojg7cn6y-Ma5qczDh9Ivb8koHAWtH8jga1kxxWdLk-uc_12yjrjDy4MUWssVRdwokYZ50OTvnppQRUpeEcAUgwouYnpqnwWcaI_EryAhK2myPWfJtZALpaYPDwsAONKs6zC8CqSoTqqhXIqTmqEToSEPS5in0g6JaenX5eUZk=",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "customer_service_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-a9fa76bd-9462-4c8c-9baf-1fab91101d45",
+                          "name": "lookup_product_info",
+                          "response": {
+                            "price": 120.0,
+                            "in_stock": true,
+                            "description": "Noise-canceling wireless headphones with 20-hour battery life."
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1779370996.3131447,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "customer_service_agent": {
+                  "name": "customer_service_agent",
+                  "instructions": "\nYou are a helpful and efficient retail customer service representative. 🛍️\nYour goal is to assist customers with their purchase history, refunds, and product inquiries.\n\n**Guidelines:**\n1.  **Identify the Customer:** If a customer asks about their history or order status, ask for their Customer ID if they haven't provided it.\n2.  **Check Order Status:** Use `get_purchase_history` to see the current status of orders (e.g., ordered, shipped, delivered, refunded).\n3.  **Handle Refunds:** When a customer wants a refund, ask for the Order ID and the reason for the refund. Use the `issue_refund` tool. If the customer mentions damage, use \"damaged\" as the reason.\n4.  **Product Inquiries:** For product questions, use `lookup_product_info`. If a product is out of stock, inform the customer.\n5.  **Be Polite & Professional:** Always use a friendly tone and emojis where appropriate.\n6.  **Prioritize Solutions:** Try to resolve the customer's issue quickly using the available tools.\n\n**Available Tools:**\n* `get_purchase_history`: Get past orders and their current status for a customer.\n* `issue_refund`: Process a refund for an order and update its status.\n* `lookup_product_info`: Get details about a product.\n\n\nYou are an agent. Your internal name is \"customer_service_agent\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Retrieves the purchase history for a given customer, including order status.\n\nArgs:\n    customer_id: The unique identifier for the customer.\n\nReturns:\n    A dictionary containing a list of past orders with their current status.",
+                          "name": "get_purchase_history",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "customer_id": {
+                                "title": "Customer Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "customer_id"
+                            ],
+                            "title": "get_purchase_historyParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Issues a refund for a specific order and updates its status.\n\nArgs:\n    order_id: The unique identifier for the order.\n    reason: The reason for the refund.\n\nReturns:\n    A dictionary confirming the refund status and updated order information.",
+                          "name": "issue_refund",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "order_id": {
+                                "title": "Order Id",
+                                "type": "string"
+                              },
+                              "reason": {
+                                "title": "Reason",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "order_id",
+                              "reason"
+                            ],
+                            "title": "issue_refundParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Looks up details for a specific product.\n\nArgs:\n    product_name: The name of the product to look up.\n\nReturns:\n    A dictionary with product details.",
+                          "name": "lookup_product_info",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "product_name": {
+                                "title": "Product Name",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "product_name"
+                            ],
+                            "title": "lookup_product_infoParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "turn_1_product_info",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Do you have wireless headphones in stock?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Yes, we have wireless headphones in stock! They are priced at $120.00 and feature noise-canceling with a 20-hour battery life.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "product_name": "wireless headphones"
+                  },
+                  "name": "lookup_product_info",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.6,
+              "criterion": {
+                "threshold": 0.6,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.6666666666666666,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___4d8e0e7a-3884-42c9-b506-6cff1ee359f1",
+      "session_details": {
+        "id": "___eval___session___4d8e0e7a-3884-42c9-b506-6cff1ee359f1",
+        "app_name": "customer_service_agent",
+        "user_id": "eval_user_1",
+        "state": {
+          "__llm_request_key__": "6009dd8c-7c85-4535-9dcc-83c1e4a769f5"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Do you have wireless headphones in stock?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f5597b18-b2bb-4185-bc4c-72e213fabcb0",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "c389063a-4d85-4f69-b6d2-74c86d4430fb",
+            "timestamp": 1779370993.9892466
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-a9fa76bd-9462-4c8c-9baf-1fab91101d45",
+                    "args": {
+                      "product_name": "wireless headphones"
+                    },
+                    "name": "lookup_product_info",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CvACAY89a1_mrvaIa0b3ympWuwNNS_KXaFNBEOqxIKslvnsLqtBnHGM3tkhmc0DT6W5ojkOPeKdw5yYK7OVUFF3Kgf61dUTqDSbm32J0spbvlPhXy5-gd6xWThehxnSigAkvQZqBiJzXAhcj4d7qcSkfnTm5nufS8P0dZTCmG9ozWLuk7x06fQDA6BgObmo2Jp1nP7Sah2HF5e5rMeU3bkfCa-vbRt5Q8sMqwJNInpEeQrPF4_ytWHNvP6wV1MzqjL-xx1WEZHzUaVNZqQfb6zY0mjbn02kZLMjUwvKp9DVm0CtZry0Vx5aE2idbmER3064WC2ojg7cn6y-Ma5qczDh9Ivb8koHAWtH8jga1kxxWdLk-uc_12yjrjDy4MUWssVRdwokYZ50OTvnppQRUpeEcAUgwouYnpqnwWcaI_EryAhK2myPWfJtZALpaYPDwsAONKs6zC8CqSoTqqhXIqTmqEToSEPS5in0g6JaenX5eUZk=",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "2cdd6b91-8ff2-48c3-b973-f8ccd29694d3"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 10,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 10
+                }
+              ],
+              "prompt_token_count": 468,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 468
+                }
+              ],
+              "thoughts_token_count": 78,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 556,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -1.285939884185791,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f5597b18-b2bb-4185-bc4c-72e213fabcb0",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "2cdd6b91-8ff2-48c3-b973-f8ccd29694d3"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "isolation_scope": null,
+            "id": "8dc0f51f-ad85-435b-8d34-cca3f3caa39f",
+            "timestamp": 1779370994.0044389
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-a9fa76bd-9462-4c8c-9baf-1fab91101d45",
+                    "name": "lookup_product_info",
+                    "response": {
+                      "price": 120.0,
+                      "in_stock": true,
+                      "description": "Noise-canceling wireless headphones with 20-hour battery life."
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f5597b18-b2bb-4185-bc4c-72e213fabcb0",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "8b17e57f-b717-4ab2-b47e-bb56edea8ccf",
+            "timestamp": 1779370996.313748
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Great news! 🎉 We do have wireless headphones in stock. They are noise-canceling with a 20-hour battery life and are priced at $120. Let me know if you'd like to add them to your cart! 🎧",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "6009dd8c-7c85-4535-9dcc-83c1e4a769f5"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 53,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 53
+                }
+              ],
+              "prompt_token_count": 583,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 583
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 636,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.06500996283765109,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-f5597b18-b2bb-4185-bc4c-72e213fabcb0",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "6009dd8c-7c85-4535-9dcc-83c1e4a769f5"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "143ede1b-f149-4c87-a84f-f4b112c5f934",
+            "timestamp": 1779370996.319255
+          }
+        ],
+        "last_update_time": 1779370996.319255
+      },
+      "user_id": "eval_user_1"
+    },
+    {
+      "eval_set_file": "customer_service_eval",
+      "eval_set_id": "customer_service_eval",
+      "eval_id": "product_history_check",
+      "final_eval_status": 2,
+      "eval_metric_results": null,
+      "overall_eval_metric_results": [
+        {
+          "metric_name": "tool_trajectory_avg_score",
+          "threshold": 0.8,
+          "criterion": {
+            "threshold": 0.8,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 1.0,
+          "eval_status": 1,
+          "details": {
+            "rubric_scores": null
+          }
+        },
+        {
+          "metric_name": "response_match_score",
+          "threshold": 0.6,
+          "criterion": {
+            "threshold": 0.6,
+            "include_intermediate_responses_in_final": false
+          },
+          "custom_function_path": null,
+          "score": 0.576923076923077,
+          "eval_status": 2,
+          "details": {
+            "rubric_scores": null
+          }
+        }
+      ],
+      "eval_metric_result_per_invocation": [
+        {
+          "actual_invocation": {
+            "invocation_id": "e-e4f34c89-a026-41cc-9e73-ccd4092b555e",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "What did I buy recently? My customer ID is CUST001.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello! 👋\n\nHere's a summary of your recent purchases:\n\n*   **Order ID:** ORD-101\n    *   **Date:** 2023-10-15\n    *   **Items:** Wireless Headphones\n    *   **Total:** $120\n    *   **Status:** Delivered 📦\n\n*   **Order ID:** ORD-102\n    *   **Date:** 2023-11-01\n    *   **Items:** USB-C Cable, Phone Case\n    *   **Total:** $35\n    *   **Status:** Refunded 💸\n\nIs there anything else I can help you with regarding these orders?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "invocation_events": [
+                {
+                  "author": "customer_service_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": {
+                          "id": "adk-7cb85724-1a7b-4439-aca2-099aef2d647f",
+                          "args": {
+                            "customer_id": "CUST001"
+                          },
+                          "name": "get_purchase_history",
+                          "partial_args": null,
+                          "will_continue": null
+                        },
+                        "function_response": null,
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": "CvwBAY89a19N-MaIG_caoVXcjdOhZZN71-25OPsYKKFWlpRQER_B-1ylA3qTsfCkDaERsQO5j9ZE1YnWJ58QcQeU4RTlPz9cDb2aGhhO1ALGvxbJctZ3QBFAkYHYoZu8hmDWJkI9MMQn869PCJg86GlJFztjjldnbufC33m2t7f9mJpEPC8jtaYJ4E6QK_MwVrOXbbHcS4x0r7_C1jFH4CqFY5erOexwLcwUZwDoPDmLRbn9vggZU27LxV28HJ28oaIl6DybgP6j16t5-65P8AMZO946kGM6bx_ew-qJHcULdRJvgadztyolhBCfsCCid3FnrOn_Mb0OY5lGoiaI",
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                      }
+                    ],
+                    "role": "model"
+                  }
+                },
+                {
+                  "author": "customer_service_agent",
+                  "content": {
+                    "parts": [
+                      {
+                        "media_resolution": null,
+                        "code_execution_result": null,
+                        "executable_code": null,
+                        "file_data": null,
+                        "function_call": null,
+                        "function_response": {
+                          "will_continue": null,
+                          "scheduling": null,
+                          "parts": null,
+                          "id": "adk-7cb85724-1a7b-4439-aca2-099aef2d647f",
+                          "name": "get_purchase_history",
+                          "response": {
+                            "orders": [
+                              {
+                                "order_id": "ORD-101",
+                                "date": "2023-10-15",
+                                "items": [
+                                  "Wireless Headphones"
+                                ],
+                                "total": 120.0,
+                                "status": "delivered"
+                              },
+                              {
+                                "order_id": "ORD-102",
+                                "date": "2023-11-01",
+                                "items": [
+                                  "USB-C Cable",
+                                  "Phone Case"
+                                ],
+                                "total": 35.0,
+                                "status": "refunded"
+                              }
+                            ]
+                          }
+                        },
+                        "inline_data": null,
+                        "text": null,
+                        "thought": null,
+                        "thought_signature": null,
+                        "video_metadata": null,
+                        "tool_call": null,
+                        "tool_response": null,
+                        "part_metadata": null
+                      }
+                    ],
+                    "role": "user"
+                  }
+                }
+              ]
+            },
+            "creation_timestamp": 1779371001.593584,
+            "rubrics": null,
+            "app_details": {
+              "agent_details": {
+                "customer_service_agent": {
+                  "name": "customer_service_agent",
+                  "instructions": "\nYou are a helpful and efficient retail customer service representative. 🛍️\nYour goal is to assist customers with their purchase history, refunds, and product inquiries.\n\n**Guidelines:**\n1.  **Identify the Customer:** If a customer asks about their history or order status, ask for their Customer ID if they haven't provided it.\n2.  **Check Order Status:** Use `get_purchase_history` to see the current status of orders (e.g., ordered, shipped, delivered, refunded).\n3.  **Handle Refunds:** When a customer wants a refund, ask for the Order ID and the reason for the refund. Use the `issue_refund` tool. If the customer mentions damage, use \"damaged\" as the reason.\n4.  **Product Inquiries:** For product questions, use `lookup_product_info`. If a product is out of stock, inform the customer.\n5.  **Be Polite & Professional:** Always use a friendly tone and emojis where appropriate.\n6.  **Prioritize Solutions:** Try to resolve the customer's issue quickly using the available tools.\n\n**Available Tools:**\n* `get_purchase_history`: Get past orders and their current status for a customer.\n* `issue_refund`: Process a refund for an order and update its status.\n* `lookup_product_info`: Get details about a product.\n\n\nYou are an agent. Your internal name is \"customer_service_agent\".",
+                  "tool_declarations": [
+                    {
+                      "retrieval": null,
+                      "computer_use": null,
+                      "file_search": null,
+                      "google_search": null,
+                      "google_maps": null,
+                      "code_execution": null,
+                      "enterprise_web_search": null,
+                      "function_declarations": [
+                        {
+                          "description": "Retrieves the purchase history for a given customer, including order status.\n\nArgs:\n    customer_id: The unique identifier for the customer.\n\nReturns:\n    A dictionary containing a list of past orders with their current status.",
+                          "name": "get_purchase_history",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "customer_id": {
+                                "title": "Customer Id",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "customer_id"
+                            ],
+                            "title": "get_purchase_historyParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Issues a refund for a specific order and updates its status.\n\nArgs:\n    order_id: The unique identifier for the order.\n    reason: The reason for the refund.\n\nReturns:\n    A dictionary confirming the refund status and updated order information.",
+                          "name": "issue_refund",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "order_id": {
+                                "title": "Order Id",
+                                "type": "string"
+                              },
+                              "reason": {
+                                "title": "Reason",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "order_id",
+                              "reason"
+                            ],
+                            "title": "issue_refundParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        },
+                        {
+                          "description": "Looks up details for a specific product.\n\nArgs:\n    product_name: The name of the product to look up.\n\nReturns:\n    A dictionary with product details.",
+                          "name": "lookup_product_info",
+                          "parameters": null,
+                          "parameters_json_schema": {
+                            "properties": {
+                              "product_name": {
+                                "title": "Product Name",
+                                "type": "string"
+                              }
+                            },
+                            "required": [
+                              "product_name"
+                            ],
+                            "title": "lookup_product_infoParams",
+                            "type": "object"
+                          },
+                          "response": null,
+                          "response_json_schema": {
+                            "additionalProperties": true,
+                            "type": "object"
+                          },
+                          "behavior": null
+                        }
+                      ],
+                      "google_search_retrieval": null,
+                      "parallel_ai_search": null,
+                      "url_context": null,
+                      "mcp_servers": null
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "expected_invocation": {
+            "invocation_id": "turn_1_purchase_history",
+            "user_content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "What did I buy recently? My customer ID is CUST001.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "final_response": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Here's your recent purchase history for customer ID CUST001:\n\n*  **Order ORD-101** (October 15, 2023): Wireless Headphones, Status: delivered, Total: $120\n* **Order ORD-102** (November 1, 2023): USB-C Cable, Phone Case, Status: refuneded, Total: $35\n\nLet me know if you have any other questions or need further assistance!",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "intermediate_data": {
+              "tool_uses": [
+                {
+                  "id": null,
+                  "args": {
+                    "customer_id": "CUST001"
+                  },
+                  "name": "get_purchase_history",
+                  "partial_args": null,
+                  "will_continue": null
+                }
+              ],
+              "tool_responses": [],
+              "intermediate_responses": []
+            },
+            "creation_timestamp": 0.0,
+            "rubrics": null,
+            "app_details": null
+          },
+          "eval_metric_results": [
+            {
+              "metric_name": "tool_trajectory_avg_score",
+              "threshold": 0.8,
+              "criterion": {
+                "threshold": 0.8,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 1.0,
+              "eval_status": 1,
+              "details": {
+                "rubric_scores": null
+              }
+            },
+            {
+              "metric_name": "response_match_score",
+              "threshold": 0.6,
+              "criterion": {
+                "threshold": 0.6,
+                "include_intermediate_responses_in_final": false
+              },
+              "custom_function_path": null,
+              "score": 0.576923076923077,
+              "eval_status": 2,
+              "details": {
+                "rubric_scores": null
+              }
+            }
+          ]
+        }
+      ],
+      "session_id": "___eval___session___42784564-b1c5-421a-a13d-127ae4a509de",
+      "session_details": {
+        "id": "___eval___session___42784564-b1c5-421a-a13d-127ae4a509de",
+        "app_name": "customer_service_agent",
+        "user_id": "eval_user_2",
+        "state": {
+          "__llm_request_key__": "dbbb769f-68e5-41b8-80a2-dc82422193f4"
+        },
+        "events": [
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "What did I buy recently? My customer ID is CUST001.",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-e4f34c89-a026-41cc-9e73-ccd4092b555e",
+            "author": "user",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "656ad6a8-fa81-40be-9a50-2f81e6576539",
+            "timestamp": 1779370993.990319
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": {
+                    "id": "adk-7cb85724-1a7b-4439-aca2-099aef2d647f",
+                    "args": {
+                      "customer_id": "CUST001"
+                    },
+                    "name": "get_purchase_history",
+                    "partial_args": null,
+                    "will_continue": null
+                  },
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": "CvwBAY89a19N-MaIG_caoVXcjdOhZZN71-25OPsYKKFWlpRQER_B-1ylA3qTsfCkDaERsQO5j9ZE1YnWJ58QcQeU4RTlPz9cDb2aGhhO1ALGvxbJctZ3QBFAkYHYoZu8hmDWJkI9MMQn869PCJg86GlJFztjjldnbufC33m2t7f9mJpEPC8jtaYJ4E6QK_MwVrOXbbHcS4x0r7_C1jFH4CqFY5erOexwLcwUZwDoPDmLRbn9vggZU27LxV28HJ28oaIl6DybgP6j16t5-65P8AMZO946kGM6bx_ew-qJHcULdRJvgadztyolhBCfsCCid3FnrOn_Mb0OY5lGoiaI",
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "e55b7a8a-7b35-4f19-9516-376c76b272e2"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 13,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 13
+                }
+              ],
+              "prompt_token_count": 476,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 476
+                }
+              ],
+              "thoughts_token_count": 50,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 539,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.5164253161503718,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-e4f34c89-a026-41cc-9e73-ccd4092b555e",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "e55b7a8a-7b35-4f19-9516-376c76b272e2"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": [],
+            "branch": null,
+            "isolation_scope": null,
+            "id": "bb4d4265-0177-40f1-b315-22c9233eaf41",
+            "timestamp": 1779370994.0648208
+          },
+          {
+            "model_version": null,
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": {
+                    "will_continue": null,
+                    "scheduling": null,
+                    "parts": null,
+                    "id": "adk-7cb85724-1a7b-4439-aca2-099aef2d647f",
+                    "name": "get_purchase_history",
+                    "response": {
+                      "orders": [
+                        {
+                          "order_id": "ORD-101",
+                          "date": "2023-10-15",
+                          "items": [
+                            "Wireless Headphones"
+                          ],
+                          "total": 120.0,
+                          "status": "delivered"
+                        },
+                        {
+                          "order_id": "ORD-102",
+                          "date": "2023-11-01",
+                          "items": [
+                            "USB-C Cable",
+                            "Phone Case"
+                          ],
+                          "total": 35.0,
+                          "status": "refunded"
+                        }
+                      ]
+                    }
+                  },
+                  "inline_data": null,
+                  "text": null,
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "user"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": null,
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": null,
+            "usage_metadata": null,
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": null,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-e4f34c89-a026-41cc-9e73-ccd4092b555e",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {},
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "1489d08a-c68e-47e0-a914-480975c1918f",
+            "timestamp": 1779371001.594046
+          },
+          {
+            "model_version": "gemini-2.5-flash",
+            "content": {
+              "parts": [
+                {
+                  "media_resolution": null,
+                  "code_execution_result": null,
+                  "executable_code": null,
+                  "file_data": null,
+                  "function_call": null,
+                  "function_response": null,
+                  "inline_data": null,
+                  "text": "Hello! 👋\n\nHere's a summary of your recent purchases:\n\n*   **Order ID:** ORD-101\n    *   **Date:** 2023-10-15\n    *   **Items:** Wireless Headphones\n    *   **Total:** $120\n    *   **Status:** Delivered 📦\n\n*   **Order ID:** ORD-102\n    *   **Date:** 2023-11-01\n    *   **Items:** USB-C Cable, Phone Case\n    *   **Total:** $35\n    *   **Status:** Refunded 💸\n\nIs there anything else I can help you with regarding these orders?",
+                  "thought": null,
+                  "thought_signature": null,
+                  "video_metadata": null,
+                  "tool_call": null,
+                  "tool_response": null,
+                  "part_metadata": null
+                }
+              ],
+              "role": "model"
+            },
+            "grounding_metadata": null,
+            "partial": null,
+            "turn_complete": null,
+            "finish_reason": "STOP",
+            "error_code": null,
+            "error_message": null,
+            "interrupted": null,
+            "custom_metadata": {
+              "__llm_request_key__": "dbbb769f-68e5-41b8-80a2-dc82422193f4"
+            },
+            "usage_metadata": {
+              "cache_tokens_details": null,
+              "cached_content_token_count": null,
+              "candidates_token_count": 153,
+              "candidates_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 153
+                }
+              ],
+              "prompt_token_count": 602,
+              "prompt_tokens_details": [
+                {
+                  "modality": "TEXT",
+                  "token_count": 602
+                }
+              ],
+              "thoughts_token_count": null,
+              "tool_use_prompt_token_count": null,
+              "tool_use_prompt_tokens_details": null,
+              "total_token_count": 755,
+              "traffic_type": "ON_DEMAND"
+            },
+            "live_session_resumption_update": null,
+            "live_session_id": null,
+            "go_away": null,
+            "input_transcription": null,
+            "output_transcription": null,
+            "avg_logprobs": -0.07943048664167815,
+            "logprobs_result": null,
+            "cache_metadata": null,
+            "citation_metadata": null,
+            "interaction_id": null,
+            "invocation_id": "e-e4f34c89-a026-41cc-9e73-ccd4092b555e",
+            "author": "customer_service_agent",
+            "actions": {
+              "skip_summarization": null,
+              "state_delta": {
+                "__llm_request_key__": "dbbb769f-68e5-41b8-80a2-dc82422193f4"
+              },
+              "artifact_delta": {},
+              "transfer_to_agent": null,
+              "escalate": null,
+              "requested_auth_configs": {},
+              "requested_tool_confirmations": {},
+              "compaction": null,
+              "end_of_agent": null,
+              "agent_state": null,
+              "rewind_before_invocation_id": null,
+              "route": null,
+              "render_ui_widgets": null,
+              "set_model_response": null
+            },
+            "output": null,
+            "node_info": {
+              "path": "customer_service_agent@1",
+              "output_for": null,
+              "message_as_output": null
+            },
+            "long_running_tool_ids": null,
+            "branch": null,
+            "isolation_scope": null,
+            "id": "437458b2-a8b1-4f6d-ae69-65d85d0cc2b3",
+            "timestamp": 1779371001.5993996
+          }
+        ],
+        "last_update_time": 1779371001.5993996
+      },
+      "user_id": "eval_user_2"
+    }
+  ],
+  "creation_timestamp": 1779371003.7754302
+}
